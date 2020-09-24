@@ -3,4 +3,13 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 
 def openBrowser():
-    driver = webdriver.Firefox(executable_path='./geckodriver')
+    return webdriver.Firefox(executable_path='./geckodriver')
+
+
+def getLink(driver, link):
+    driver.get(link)
+
+
+def run(link):
+    driver = openBrowser()
+    getLink(driver, link)

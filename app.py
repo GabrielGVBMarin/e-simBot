@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from src.index import openBrowser
+from src.index import run
 
 app = Flask(__name__)
 
@@ -17,7 +17,7 @@ def about():
 
 @app.route('/battle/link', methods=["GET", "POST"])
 def battleLink():
-    print(request.form["link"])
+    run(request.form["link"])
     return render_template("home.html")
 
 
