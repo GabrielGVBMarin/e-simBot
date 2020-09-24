@@ -1,0 +1,8 @@
+{%extends "layout.html"%} {% block content %}
+<div class="home">
+	<form action="/post_field" method="post">
+		<input type="hidden" name="this_name" value="value1" />
+		<input type="submit" value="Press Me!" />
+	</form>
+</div>
+{%endblock%}
